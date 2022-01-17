@@ -1,0 +1,48 @@
+t=[1960:1:2009]';
+subplot('position',[0.2,0.1,0.6,0.4])
+a1=plot(t,CL,'y','Marker','h');
+hold on
+b1=plot(t,NG,'b','Marker','d');
+hold on
+c1=plot(t,NIS,'r','Marker','o');
+hold on
+d1=plot(t,NI,'c','Marker','p');
+hold on
+e1=plot(t,NU,'m','Marker','s');
+hold on
+f1=plot(t,PA,'k','Marker','*');
+hold on
+g1=plot(t,RE,'g','Marker','x');
+hold off
+h1=legend([a1,b1,c1,d1,e1,f1,g1],'CL','NG','NIS','NI','NU','PA','RE','location','northeastoutside');
+title('TX Energy Consumption by Source')
+xlabel('Year')
+ylabel('Percentage')
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+subplot(2,2,2)
+a2=plot(t,A,'y','Marker','h');
+hold on
+b2=plot(t,C,'b','Marker','d');
+hold on
+c2=plot(t,I,'r','Marker','o');
+hold on
+d2=plot(t,R,'c','Marker','p');
+hold off
+h1=legend([a2,b2,c2,d2],'A','C','I','R','location','northeastoutside');
+title('TX Energy Consumption by Sector')
+xlabel('Year')
+ylabel('Percentage')
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+subplot(2,2,1)
+a3=plot(t,EA,'y','Marker','h');
+hold on
+b3=plot(t,EC,'b','Marker','d');
+hold on
+c3=plot(t,EI,'r','Marker','o');
+hold on
+d3=plot(t,ER,'c','Marker','p');
+hold off
+h3=legend([a3,b3,c3,d3],'E-A','E-C','E-I','E-R','location','northeastoutside');
+title('TX Electricity Consumption by Sector')
+xlabel('Year')
+ylabel('Percentage')

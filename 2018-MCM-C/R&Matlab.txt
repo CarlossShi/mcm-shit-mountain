@@ -1,0 +1,340 @@
+https://www.eia.gov/state/?sid=CA
+
+data<-read.table("C:/Users/hasee/Desktop/2018美赛/data/ProblemCData.csv",header=TRUE,sep=",",colClasses=c("character","character","numeric","numeric"))
+data$Data[data$Data==0]<-NA
+dataAZ<-data[data$StateCode=="AZ",]
+dataCA<-data[data$StateCode=="CA",]
+dataNM<-data[data$StateCode=="NM",]
+dataTX<-data[data$StateCode=="TX",]
+with(data,{plot(Year,Data)})
+with(dataAZ[dataAZ$MSN=="ABICB",],{plot(Year,Data,type="b",pch=15,lty=1)})
+dataAZ2009<-dataAZ[dataAZ$Year=="2009",]
+dataAZ2009test1<-dataAZ2009[MSN=="PATXB"|MSN=="NGTXB"|MSN=="CLTXB"|MSN=="NUETB",]
+
+
+
+renewable<-dataAZ2009[MSN=="BMTCB"|MSN=="GETXB"|MSN=="HYTCB"|MSN=="SOTXB"|MSN=="WWTXB"|MSN=="WYTCB",]
+test1<-dataAZ2009test1[,c(4)]
+test1[5]<-sum(renewable$Data)
+pie(test1,)
+
+
+
+
+[m,n]=size(a);  %topsis算法
+for j=1:n
+b(:,j)=a(:,j)/norm(a(:,j));%向量规范化
+end
+w=[0.09,0.09,0.09,0.09,0.09,0.09,0.09,0.09,0.09,0.09,0.1]; %权重，要根据地区特色更改
+c=b.*repmat(w,m,1);%求加权矩阵
+Cstar=max(c);%求正理想解
+Cstar(11)=min(c(:,11));
+for j=1:3
+Cstar(j)=min(c(:,j));%属性1-3,11为成本型的，1-3为不可再生能源，11为总消费，其余为清洁能源
+end
+C0=min(c);%求负理想解
+C0(11)=max(c(:,11));
+for j=1:3
+C0(j)=max(c(:,j));%属性1-3,11为成本型的，1-3为不可再生能源，11为总消费，其余为清洁能源
+end
+for i=1:m
+Sstar(i)=norm(c(i,:)-Cstar);%求到正理想解的距离
+S0(i)=norm(c(i,:)-C0);%求到负理想解的距离
+end
+f=S0./(Sstar+S0);
+[sf,ind]=sort(f,'descend'); %求排序结果
+
+t=1;
+for i=1:160
+if mod(ind(i),4)==1  %代表AZ，作出AZ综合指标值随年份的变化图
+x11(t)=2009-floor(ind(i)/4.01);
+y11(t)=sf(i);
+t=t+1;
+end
+end
+z11=[x11;y11];
+z12=sortrows(z11',1);
+x12=z12(:,1);
+y12=z12(:,2);
+plot(x12,y12,'b','Marker','d')
+hold on
+
+
+t=1;
+for i=1:160
+if mod(ind(i),4)==2  %代表CA，作出CA综合指标值随年份的变化图
+x21(t)=2009-floor(ind(i)/4.01);
+y21(t)=sf(i);
+t=t+1;
+end
+end
+z21=[x21;y21];
+z22=sortrows(z21',1);
+x22=z22(:,1);
+y22=z22(:,2);
+plot(x22,y22,'g','Marker','h')
+hold on
+
+t=1;
+for i=1:160
+if mod(ind(i),4)==3  %代表NM，作出AZ综合指标值随年份的变化图
+x31(t)=2009-floor(ind(i)/4.01);
+y31(t)=sf(i);
+t=t+1;
+end
+end
+z31=[x31;y31];
+z32=sortrows(z31',1);
+x32=z32(:,1);
+y32=z32(:,2);
+plot(x32,y32,'r','Marker','p')
+hold on
+
+t=1;
+for i=1:160
+if mod(ind(i),4)==0  %代表TX，作出AZ综合指标值随年份的变化图
+x41(t)=2009-floor(ind(i)/4.01);
+y41(t)=sf(i);
+t=t+1;
+end
+end
+z41=[x41;y41];
+z42=sortrows(z41',1);
+x42=z42(:,1);
+y42=z42(:,2);
+plot(x42,y42,'c','Marker','s')
+hold off
+
+
+
+data <- read.table("Trade_small.txt",head=TRUE,sep=" ")
+head(data)
+#......................
+#############################################
+## Set up socio-cubes
+dn.Y <- list(3)
+dn.Y[[1]] <- unique(data$exp)
+dn.Y[[2]] <- unique(data$exp)
+dn.Y[[3]] <- 1:T
+
+dn.X <- vector("list",4)
+dn.X[[1]] <- unique(data$exp)
+dn.X[[2]] <- unique(data$exp)
+dn.X[[3]] <- colnames(X.c.t)
+dn.X[[4]] <- 1:T
+
+Y <- array(NA, c(A,A,T), dimnames=dn.Y)
+X <- array(0, c(A,A,K*T,T),dimnames=dn.X)
+
+c <- 1
+for(i in 1:(A-1)){
+	for(j in (i+1):A){
+		for(t in 1:T){
+				print(c)
+				Y[i,j,t] <- data$ltrade[c]
+				X[i,j,,t] <- as.numeric(X.c.t[c,])
+				c <- c+1
+				Y[j,i,t] <- data$ltrade[c]
+				X[j,i,,t] <- as.numeric(X.c.t[c,])
+				c <- c+1
+			}}}
+
+
+Eta <- array(NA, c(A,A,T), dimnames=dn.Y)
+
+###############################################
+
+
+MCM<-read.table("ProblemCData.csv",header=TRUE,sep=",",colClasses=c("character","character","numeric","numeric"))
+no<-c("Pe","NG","Co","NP","RE","NI","NIS","TC","RS","IS","CS","TS","TEV","EPS","E")
+st<-c("AZ","CA","NM","TX")
+ye<-c(1960:2009)
+socmx<-array(0,c(15,15,50,4),dimnames=list(no,no,ye,st))
+for(i in ye)
+{
+for(j in st)
+{
+attach(MCM)
+CLACB<-MCM[MSN=="CLACB"&Year==i&StateCode==j,][1,4]
+CLCCB<-MCM[MSN=="CLCCB"&Year==i&StateCode==j,][1,4]
+CLEIB<-MCM[MSN=="CLEIB"&Year==i&StateCode==j,][1,4]
+CLICB<-MCM[MSN=="CLICB"&Year==i&StateCode==j,][1,4]
+CLRCB<-MCM[MSN=="CLRCB"&Year==i&StateCode==j,][1,4]
+CLTCB<-MCM[MSN=="CLTCB"&Year==i&StateCode==j,][1,4]
+ELISB<-MCM[MSN=="ELISB"&Year==i&StateCode==j,][1,4]
+ELNIB<-MCM[MSN=="ELNIB"&Year==i&StateCode==j,][1,4]
+ESACB<-MCM[MSN=="ESACB"&Year==i&StateCode==j,][1,4]
+ESCCB<-MCM[MSN=="ESCCB"&Year==i&StateCode==j,][1,4]
+ESICB<-MCM[MSN=="ESICB"&Year==i&StateCode==j,][1,4]
+ESRCB<-MCM[MSN=="ESRCB"&Year==i&StateCode==j,][1,4]
+NGACB<-MCM[MSN=="NGACB"&Year==i&StateCode==j,][1,4]
+NGCCB<-MCM[MSN=="NGCCB"&Year==i&StateCode==j,][1,4]
+NGEIB<-MCM[MSN=="NGEIB"&Year==i&StateCode==j,][1,4]
+NGICB<-MCM[MSN=="NGICB"&Year==i&StateCode==j,][1,4]
+NGRCB<-MCM[MSN=="NGRCB"&Year==i&StateCode==j,][1,4]
+NNTCB<-MCM[MSN=="NNTCB"&Year==i&StateCode==j,][1,4]
+NUETB<-MCM[MSN=="NUETB"&Year==i&StateCode==j,][1,4]
+PAACB<-MCM[MSN=="PAACB"&Year==i&StateCode==j,][1,4]
+PACCB<-MCM[MSN=="PACCB"&Year==i&StateCode==j,][1,4]
+PAEIB<-MCM[MSN=="PAEIB"&Year==i&StateCode==j,][1,4]
+PAICB<-MCM[MSN=="PAICB"&Year==i&StateCode==j,][1,4]
+PARCB<-MCM[MSN=="PARCB"&Year==i&StateCode==j,][1,4]
+PMTCB<-MCM[MSN=="PMTCB"&Year==i&StateCode==j,][1,4]
+RETCB<-MCM[MSN=="RETCB"&Year==i&StateCode==j,][1,4]
+TEACB<-MCM[MSN=="TEACB"&Year==i&StateCode==j,][1,4]
+TECCB<-MCM[MSN=="TECCB"&Year==i&StateCode==j,][1,4]
+TEICB<-MCM[MSN=="TEICB"&Year==i&StateCode==j,][1,4]
+TERCB<-MCM[MSN=="TERCB"&Year==i&StateCode==j,][1,4]
+TETCB<-MCM[MSN=="TETCB"&Year==i&StateCode==j,][1,4]
+ESTCB<-MCM[MSN=="ESTCB"&Year==i&StateCode==j,][1,4]
+TETXB<-MCM[MSN=="TETXB"&Year==i&StateCode==j,][1,4]
+detach(MCM)
+if (j=="AZ") jn=1
+if (j=="CA") jn=2
+if (j=="NM") jn=3
+if (j=="TX") jn=4
+socmx[1,8,i-1959,jn]<-PMTCB/TETCB*100
+socmx[2,8,i-1959,jn]<-NNTCB/TETCB*100
+socmx[3,8,i-1959,jn]<-CLTCB/TETCB*100
+socmx[4,8,i-1959,jn]<-NUETB/TETCB*100
+socmx[5,8,i-1959,jn]<-RETCB/TETCB*100
+socmx[6,8,i-1959,jn]<-ELNIB/TETCB*100
+socmx[7,8,i-1959,jn]<-ELISB/TETCB*100
+socmx[1,9,i-1959,jn]<-PARCB/TETCB*100
+socmx[2,9,i-1959,jn]<-NGRCB/TETCB*100
+socmx[3,9,i-1959,jn]<-CLRCB/TETCB*100
+socmx[15,9,i-1959,jn]<-ESRCB/ESTCB*100
+socmx[1,10,i-1959,jn]<-PAICB/TETCB*100
+socmx[2,10,i-1959,jn]<-NGICB/TETCB*100
+socmx[3,10,i-1959,jn]<-CLICB/TETCB*100
+socmx[15,10,i-1959,jn]<-ESICB/ESTCB*100
+socmx[1,11,i-1959,jn]<-PACCB/TETCB*100
+socmx[2,11,i-1959,jn]<-NGCCB/TETCB*100
+socmx[3,11,i-1959,jn]<-CLCCB/TETCB*100
+socmx[15,11,i-1959,jn]<-ESCCB/ESTCB*100
+socmx[1,12,i-1959,jn]<-PAACB/TETCB*100
+socmx[2,12,i-1959,jn]<-NGACB/TETCB*100
+socmx[3,12,i-1959,jn]<-CLACB/TETCB*100
+socmx[15,12,i-1959,jn]<-ESACB/ESTCB*100
+socmx[9,13,i-1959,jn]<-TERCB/TETXB*100
+socmx[10,13,i-1959,jn]<-TEICB/TETXB*100
+socmx[11,13,i-1959,jn]<-TECCB/TETXB*100
+socmx[12,13,i-1959,jn]<-TEACB/TETXB*100
+socmx[1,14,i-1959,jn]<-PAEIB/TETCB*100
+socmx[2,14,i-1959,jn]<-NGEIB/TETCB*100
+socmx[3,14,i-1959,jn]<-CLEIB/TETCB*100
+socmx[4,14,i-1959,jn]<-NUETB/TETCB*100
+socmx[5,14,i-1959,jn]<-RETCB/TETCB*100
+socmx[14,15,i-1959,jn]<-(PAEIB+NGEIB+CLEIB+NUETB+RETCB)/ESTCB*100
+}}
+
+
+
+
+
+
+
+
+rm(list=ls(all=TRUE))
+func.time <- proc.time()
+MCM<-read.table("ProblemCData.csv",header=TRUE,sep=",",colClasses=c("character","character","numeric","numeric"))
+EXD<-read.table("ExtraData.csv",header=TRUE,sep=",",colClasses=c("character","numeric","numeric"))
+no<-c("Pe","NG","Co","NP","RE","NI","NIS","TC","RS","IS","CS","TS","TEV","EPS","E")
+st<-c("AZ","CA","NM","TX")
+ye<-c(1960:2009)
+socmx<-array(0,c(15,15,50,4),dimnames=list(no,no,ye,st))
+for(i in ye)
+{
+for(j in st)
+{
+attach(MCM)
+CLACB<-MCM[MSN=="CLACB"&Year==i&StateCode==j,][1,4]
+CLCCB<-MCM[MSN=="CLCCB"&Year==i&StateCode==j,][1,4]
+CLEIB<-MCM[MSN=="CLEIB"&Year==i&StateCode==j,][1,4]
+CLICB<-MCM[MSN=="CLICB"&Year==i&StateCode==j,][1,4]
+CLRCB<-MCM[MSN=="CLRCB"&Year==i&StateCode==j,][1,4]
+CLTCB<-MCM[MSN=="CLTCB"&Year==i&StateCode==j,][1,4]
+ELISB<-MCM[MSN=="ELISB"&Year==i&StateCode==j,][1,4]
+ELNIB<-MCM[MSN=="ELNIB"&Year==i&StateCode==j,][1,4]
+ESACB<-MCM[MSN=="ESACB"&Year==i&StateCode==j,][1,4]
+ESCCB<-MCM[MSN=="ESCCB"&Year==i&StateCode==j,][1,4]
+ESICB<-MCM[MSN=="ESICB"&Year==i&StateCode==j,][1,4]
+ESRCB<-MCM[MSN=="ESRCB"&Year==i&StateCode==j,][1,4]
+NGACB<-MCM[MSN=="NGACB"&Year==i&StateCode==j,][1,4]
+NGCCB<-MCM[MSN=="NGCCB"&Year==i&StateCode==j,][1,4]
+NGEIB<-MCM[MSN=="NGEIB"&Year==i&StateCode==j,][1,4]
+NGICB<-MCM[MSN=="NGICB"&Year==i&StateCode==j,][1,4]
+NGRCB<-MCM[MSN=="NGRCB"&Year==i&StateCode==j,][1,4]
+NNTCB<-MCM[MSN=="NNTCB"&Year==i&StateCode==j,][1,4]
+NUETB<-MCM[MSN=="NUETB"&Year==i&StateCode==j,][1,4]
+PAACB<-MCM[MSN=="PAACB"&Year==i&StateCode==j,][1,4]
+PACCB<-MCM[MSN=="PACCB"&Year==i&StateCode==j,][1,4]
+PAEIB<-MCM[MSN=="PAEIB"&Year==i&StateCode==j,][1,4]
+PAICB<-MCM[MSN=="PAICB"&Year==i&StateCode==j,][1,4]
+PARCB<-MCM[MSN=="PARCB"&Year==i&StateCode==j,][1,4]
+PMTCB<-MCM[MSN=="PMTCB"&Year==i&StateCode==j,][1,4]
+RETCB<-MCM[MSN=="RETCB"&Year==i&StateCode==j,][1,4]
+TEACB<-MCM[MSN=="TEACB"&Year==i&StateCode==j,][1,4]
+TECCB<-MCM[MSN=="TECCB"&Year==i&StateCode==j,][1,4]
+TEICB<-MCM[MSN=="TEICB"&Year==i&StateCode==j,][1,4]
+TERCB<-MCM[MSN=="TERCB"&Year==i&StateCode==j,][1,4]
+TETCB<-MCM[MSN=="TETCB"&Year==i&StateCode==j,][1,4]
+ESTCB<-MCM[MSN=="ESTCB"&Year==i&StateCode==j,][1,4]
+TETXB<-MCM[MSN=="TETXB"&Year==i&StateCode==j,][1,4]
+detach(MCM)
+if (j=="AZ") jn=1
+if (j=="CA") jn=2
+if (j=="NM") jn=3
+if (j=="TX") jn=4
+socmx[1,8,i-1959,jn]<-PMTCB
+socmx[2,8,i-1959,jn]<-NNTCB
+socmx[3,8,i-1959,jn]<-CLTCB
+socmx[4,8,i-1959,jn]<-NUETB
+socmx[5,8,i-1959,jn]<-RETCB
+socmx[6,8,i-1959,jn]<-ELNIB
+socmx[7,8,i-1959,jn]<-ELISB
+socmx[1,9,i-1959,jn]<-PARCB
+socmx[2,9,i-1959,jn]<-NGRCB
+socmx[3,9,i-1959,jn]<-CLRCB
+socmx[15,9,i-1959,jn]<-ESRCB
+socmx[1,10,i-1959,jn]<-PAICB
+socmx[2,10,i-1959,jn]<-NGICB
+socmx[3,10,i-1959,jn]<-CLICB
+socmx[15,10,i-1959,jn]<-ESICB
+socmx[1,11,i-1959,jn]<-PACCB
+socmx[2,11,i-1959,jn]<-NGCCB
+socmx[3,11,i-1959,jn]<-CLCCB
+socmx[15,11,i-1959,jn]<-ESCCB
+socmx[1,12,i-1959,jn]<-PAACB
+socmx[2,12,i-1959,jn]<-NGACB
+socmx[3,12,i-1959,jn]<-CLACB
+socmx[15,12,i-1959,jn]<-ESACB
+socmx[9,13,i-1959,jn]<-TERCB
+socmx[10,13,i-1959,jn]<-TEICB
+socmx[11,13,i-1959,jn]<-TECCB
+socmx[12,13,i-1959,jn]<-TEACB
+socmx[1,14,i-1959,jn]<-PAEIB
+socmx[2,14,i-1959,jn]<-NGEIB
+socmx[3,14,i-1959,jn]<-CLEIB
+socmx[4,14,i-1959,jn]<-NUETB
+socmx[5,14,i-1959,jn]<-RETCB
+socmx[14,15,i-1959,jn]<-PAEIB+NGEIB+CLEIB+NUETB+RETCB
+}}
+
+
+XXX<-NULL
+for(i in 1:15)
+{
+for(j in 1:15)
+{
+if (i!=j)
+{
+for (t in ye)
+ {LB<-data.frame(i=i,j=j,t=t-1959,ni=no[i],nj=no[j],x=socmx[i,j,t-1959,1]/100000,pop=EXD[EXD$State=="AZ"&EXD$Year==t,][1,3]/1000)
+XXX<-rbind(XXX,LB)
+}
+}
+}
+}
+
+
