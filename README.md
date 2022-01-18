@@ -49,15 +49,15 @@
 
 # 2018-APMCM-Real-time training model for elderly people balance ability
 
-| ![1_The heatmap of correlation matrix](images/2018-APMCM-A/1_The heatmap of correlation matrix.png) | ![2_Selected 25 indicators in 42 monitoring points](images/2018-APMCM-A/2_Selected 25 indicators in 42 monitoring points.jpg) | ![3_Two different cases when identifying the supporting plane](images/2018-APMCM-A/3_Two different cases when identifying the supporting plane.png) | ![4_Changing supporting plane](images/2018-APMCM-A/4_Changing supporting plane.jpg) |
-| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| ![5_Meaning of  θ and I](images/2018-APMCM-A/5_Meaning of  θ and I.png) | ![6_Time series of I_1 and  I_2 (data from aizhenjiang)](images/2018-APMCM-A/6_Time series of I_1 and  I_2 (data from aizhenjiang).png) | ![7_Time series of I_1 (data from aizhenjiang who didn’t fall)](images/2018-APMCM-A/7_Time series of I_1 (data from aizhenjiang who didn’t fall).png) | ![10_Supporting plane and time series of I_1 (data from wangdeqin)](images/2018-APMCM-A/10_Supporting plane and time series of I_1 (data from wangdeqin).png) |
+| ![1](images/2018-APMCM-A/1.png) | ![2](images/2018-APMCM-A/2.jpg) | ![3](images/2018-APMCM-A/3.png) | ![4](images/2018-APMCM-A/4.jpg)   |
+| ------------------------------- | ------------------------------- | ------------------------------- | --------------------------------- |
+| ![5](images/2018-APMCM-A/5.png) | ![6](images/2018-APMCM-A/6.png) | ![8](images/2018-APMCM-A/8.png) | ![10](images/2018-APMCM-A/10.png) |
 
 # 2019-ICM-Time to leave the Louvre
 
-| ![2_Analysis of the internal structure](images/2019-ICM-D/2_Analysis of the internal structure.png) | ![7_Minimal evacuation distance model](images/2019-ICM-D/7_Minimal evacuation distance model.png) | ![8_Corridors distribution](images/2019-ICM-D/8_Corridors distribution.png) |
-| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| ![14_Occupied time of each grid](images/2019-ICM-D/14_Occupied time of each grid.png) | ![16_The percentage of people on each floor and exit from gates](images/2019-ICM-D/16_The percentage of people on each floor and exit from gates.png) | ![17_The percentage of people on each floor and exit from gates](images/2019-ICM-D/17_The percentage of people on each floor and exit from gates.png) |
+| ![2](images/2019-ICM-D/2.png)   | ![7](images/2019-ICM-D/7.png)   | ![8](images/2019-ICM-D/8.png)   |
+| ------------------------------- | ------------------------------- | ------------------------------- |
+| ![14](images/2019-ICM-D/14.png) | ![16](images/2019-ICM-D/16.png) | ![17](images/2019-ICM-D/17.png) |
 
 # 2020-CPMCM-飞行器质心平衡供油策略优化
 
