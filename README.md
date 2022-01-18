@@ -17,3 +17,9 @@
 | [2020年第十七届中国研究生数学建模竞赛赛题](https://cpipc.acge.org.cn//cw/detail/4/2c9088a674924b7f01749981b29502e9) | [“华为杯”第十七届中国研究生数学建模竞赛获奖名单公布](https://cpipc.acge.org.cn//cw/detail/4/2c9088a67597479f0176753856661398) |  F   |                 飞行器质心平衡供油策略优化                  |  Matlab  |      |                                                              | :white_check_mark: |
 | [2021年MathorCup高校数学建模挑战赛——大数据竞赛](https://www.saikr.com/vse/bigdata1) |                                                              |  B   |             信息流智能推荐算法中的序列评估问题              |  Python  |      |                                                              |                    |
 
+# 2014-SHMCM-海重点区域探测
+
+| ![5](images/2014-SHMCM/5.png)   | ![6](images/2014-SHMCM/6.png)   | ![7](images/2014-SHMCM/7.png)   | ![8](images/2014-SHMCM/8.png)   |
+| ------------------------------- | ------------------------------- | ------------------------------- | ------------------------------- |
+| ![12](images/2014-SHMCM/12.png) | ![14](images/2014-SHMCM/14.png) | ![15](images/2014-SHMCM/15.png) | ![16](images/2014-SHMCM/16.png) |
+
