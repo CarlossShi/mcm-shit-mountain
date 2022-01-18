@@ -23,17 +23,44 @@
 | ------------------------------- | ------------------------------- | ------------------------------- | ------------------------------- |
 | ![12](images/2014-SHMCM/12.png) | ![14](images/2014-SHMCM/14.png) | ![15](images/2014-SHMCM/15.png) | ![16](images/2014-SHMCM/16.png) |
 
+# 2015-IM2C-Movie Scheduling
+
+| ![1](images/2015-IM2C/1.png) | ![2](images/2015-IM2C/2.png) | ![3](images/2015-IM2C/3.png) | ![4](images/2015-IM2C/4.png) |
+| ---------------------------- | ---------------------------- | ---------------------------- | ---------------------------- |
+
+
+
 # 2015-SHMCM-大小桌转化
+
+![2015年上海市中学生数学建模竞赛试题视频](images/2015-SHMCM/2015年上海市中学生数学建模竞赛试题视频.gif)
 
 | ![1](images/2015-SHMCM/1.jpg) | ![2](images/2015-SHMCM/2.jpg)   | ![3](images/2015-SHMCM/3.jpg)   | ![4](images/2015-SHMCM/4.jpg)   | ![5](images/2015-SHMCM/5.jpg)   | ![6](images/2015-SHMCM/6.jpg)   | ![7](images/2015-SHMCM/7.jpg)   | ![8](images/2015-SHMCM/8.jpg)   |
 | ----------------------------- | ------------------------------- | ------------------------------- | ------------------------------- | ------------------------------- | ------------------------------- | ------------------------------- | ------------------------------- |
 | ![9](images/2015-SHMCM/9.jpg) | ![10](images/2015-SHMCM/10.jpg) | ![11](images/2015-SHMCM/11.jpg) | ![12](images/2015-SHMCM/12.jpg) | ![13](images/2015-SHMCM/13.jpg) | ![14](images/2015-SHMCM/14.jpg) | ![15](images/2015-SHMCM/15.jpg) | ![16](images/2015-SHMCM/16.jpg) |
 
+# 2018-MCM-Energy Production
 
+| ![AZ](images/2018-MCM-C/AZ.jpg) | ![CA](images/2018-MCM-C/CA.jpg) | ![NM](images/2018-MCM-C/NM.jpg) | ![TX](images/2018-MCM-C/TX.jpg) |
+| ------------------------------- | ------------------------------- | ------------------------------- | ------------------------------- |
 
-| ![1](images/2015-SHMCM/1.jpg) | ![2](images/2015-SHMCM/2.jpg) | ![3](images/2015-SHMCM/3.jpg) | ![4](images/2015-SHMCM/4.jpg) |
-| ----------------------------- | ----------------------------- | ----------------------------- | ----------------------------- |
-| ![5](images/2015-SHMCM/5.jpg) | ![6](images/2015-SHMCM/6.jpg) | ![7](images/2015-SHMCM/7.jpg) | ![8](images/2015-SHMCM/8.jpg) |
-| ![9](images/2015-SHMCM/9.jpg) | ![10](images/2015-SHMCM/10.jpg) | ![11](images/2015-SHMCM/11.jpg) | ![12](images/2015-SHMCM/12.jpg) |
-| ![13](images/2015-SHMCM/13.jpg) | ![14](images/2015-SHMCM/14.jpg) | ![15](images/2015-SHMCM/15.jpg) | ![16](images/2015-SHMCM/16.jpg) |
+# 2018-CUMCM-智能RGV动态调度策略
+
+![1](images/2018-CUMCM-B/1.GIF)
+
+# 2018-APMCM-Real-time training model for elderly people balance ability
+
+| ![1_The heatmap of correlation matrix](images/2018-APMCM-A/1_The heatmap of correlation matrix.png) | ![2_Selected 25 indicators in 42 monitoring points](images/2018-APMCM-A/2_Selected 25 indicators in 42 monitoring points.jpg) | ![3_Two different cases when identifying the supporting plane](images/2018-APMCM-A/3_Two different cases when identifying the supporting plane.png) | ![4_Changing supporting plane](images/2018-APMCM-A/4_Changing supporting plane.jpg) |
+| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| ![5_Meaning of  θ and I](images/2018-APMCM-A/5_Meaning of  θ and I.png) | ![6_Time series of I_1 and  I_2 (data from aizhenjiang)](images/2018-APMCM-A/6_Time series of I_1 and  I_2 (data from aizhenjiang).png) | ![7_Time series of I_1 (data from aizhenjiang who didn’t fall)](images/2018-APMCM-A/7_Time series of I_1 (data from aizhenjiang who didn’t fall).png) | ![10_Supporting plane and time series of I_1 (data from wangdeqin)](images/2018-APMCM-A/10_Supporting plane and time series of I_1 (data from wangdeqin).png) |
+
+# 2019-ICM-Time to leave the Louvre
+
+| ![2_Analysis of the internal structure](images/2019-ICM-D/2_Analysis of the internal structure.png) | ![7_Minimal evacuation distance model](images/2019-ICM-D/7_Minimal evacuation distance model.png) | ![8_Corridors distribution](images/2019-ICM-D/8_Corridors distribution.png) |
+| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| ![14_Occupied time of each grid](images/2019-ICM-D/14_Occupied time of each grid.png) | ![16_The percentage of people on each floor and exit from gates](images/2019-ICM-D/16_The percentage of people on each floor and exit from gates.png) | ![17_The percentage of people on each floor and exit from gates](images/2019-ICM-D/17_The percentage of people on each floor and exit from gates.png) |
+
+# 2020-CPMCM-飞行器质心平衡供油策略优化
+
+| ![1](images/2020-CPMCM-F/1.png) | ![2](images/2020-CPMCM-F/2.png) |
+| ------------------------------- | ------------------------------- |
 
