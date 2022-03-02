@@ -1,4 +1,4 @@
-# MCM-shit-mountain
+# mcm-shit-mountain
 
 我的数学建模屎山代码
 
