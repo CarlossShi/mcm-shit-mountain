@@ -67,7 +67,7 @@ My MCM shit mountain. 我的数学建模屎山代码.
 
 # 2021-MCBG-信息流智能推荐算法中的序列评估问题
 
-| ![userID](images/2021-MCB-B/userID.png)       | ![Request Data in Training Set](images/2021-MCB-B/Request Data in Training Set.png) | ![Request Data in Training Set](images/2021-MCB-B/Request Data in Training Set.png) | ![Amount of Data for Each User](images/2021-MCB-B/Amount of Data for Each User.png) | ![Frequency Histogram of User 1439416582](images/2021-MCB-B/Frequency Histogram of User 1439416582.png) |
+| ![userID](images/2021-MCB-B/userID.png) | ![Request Data in Training Set](images/2021-MCB-B/Request Data in Training Set.png) | ![Request Data in Training Set](images/2021-MCB-B/Request Data in Training Set.png) | ![Amount of Data for Each User](images/2021-MCB-B/Amount of Data for Each User.png) | ![Frequency Histogram of User 1439416582](images/2021-MCB-B/Frequency Histogram of User 1439416582.png) |
 | --------------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | ![requestID](images/2021-MCB-B/requestID.png) | ![Request Data in Test Set](images/2021-MCB-B/Request Data in Test Set.png) | ![Request Time in Test Set](images/2021-MCB-B/Request Time in Test Set.png) | ![Amount of Data for Loyal User](images/2021-MCB-B/Amount of Data for Loyal User.png) | ![Frequency Histogram of User 1376133776](images/2021-MCB-B/Frequency Histogram of User 1376133776.png) |
 
