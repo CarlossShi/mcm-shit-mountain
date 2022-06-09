@@ -76,7 +76,6 @@ My MCM shit mountain. 我的数学建模屎山代码.
 
 # 2022-MC-无人仓的搬运机器人调度问题
 
-| ![distance](images/2022-MC-B/distance.png)       | ![question2-bn](images\2022-MC-B\question2-bn.png) | ![board-20220418-022922.png](images\2022-MC-B\board-20220418-022922.png) |
+| ![distance](images/2022-MC-B/distance.png)       | ![question2-bn](images/2022-MC-B/question2-bn.png) | ![board-20220418-022922.png](images/2022-MC-B/board-20220418-022922.png) |
 | ------------------------------------------------ | -------------------------------------------------- | ------------------------------------------------------------ |
-| ![question2-2](images\2022-MC-B\question2-2.png) | ![question2](images\2022-MC-B\question2.png)       | ![sensitivity-1](images\2022-MC-B\sensitivity-1.png)         |
-
+| ![question2-2](images/2022-MC-B/question2-2.png) | ![question2](images/2022-MC-B/question2.png)       | ![sensitivity-1](images/2022-MC-B/sensitivity-1.png)         |
