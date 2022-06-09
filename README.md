@@ -16,7 +16,7 @@ My MCM shit mountain. 我的数学建模屎山代码.
 | [2019 MCM/ICM Problems](https://www.comap.com/undergraduate/contests/mcm/contests/2019/problems/) | [2019 MCM/ICM Results](https://www.comap.com/undergraduate/contests/mcm/contests/2019/results/) |  D   |                  Time to leave the Louvre                   |  Matlab  |   F    | [1905883](https://www.comap-math.com/mcm/2019Certs/1905883.pdf) | :white_check_mark: |
 | [2020年第十七届中国研究生数学建模竞赛赛题](https://cpipc.acge.org.cn//cw/detail/4/2c9088a674924b7f01749981b29502e9) | [“华为杯”第十七届中国研究生数学建模竞赛获奖名单公布](https://cpipc.acge.org.cn//cw/detail/4/2c9088a67597479f0176753856661398) |  F   |                 飞行器质心平衡供油策略优化                  |  Matlab  |        |                                                              | :white_check_mark: |
 | [2021年MathorCup高校数学建模挑战赛——大数据竞赛](https://www.saikr.com/vse/bigdata1) | [2021年MathorCup高校数学建模挑战赛——大数据竞赛初赛成绩发布](https://www.saikr.com/c/nd/8603) |  B   |             信息流智能推荐算法中的序列评估问题              |  Python  | 一等铜 | [MCB2102791](http://www.mathorcup.org/cert/bigdata/2021/MCB2102791_2.pdf) | :white_check_mark: |
-| [2022年第十二届MathorCup高校数学建模挑战赛](https://www.saikr.com/vse/mathorcup/2022) |                                                              |  B   |                 无人仓的搬运机器人调度问题                  |  Python  |   S    |                                                              | :white_check_mark: |
+| [2022年第十二届MathorCup高校数学建模挑战赛](https://www.saikr.com/vse/mathorcup/2022) | [2022年第十二届MathorCup高校数学建模挑战赛获奖名单](https://www.saikr.com/c/nd/9214) |  B   |                 无人仓的搬运机器人调度问题                  |  Python  |   S    | [MC2208859](http://www.mathorcup.org/cert/2022/2208859_2.pdf) | :white_check_mark: |
 
 # 2014-SHMCM-海重点区域探测
 
@@ -75,3 +75,8 @@ My MCM shit mountain. 我的数学建模屎山代码.
 | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | --------------------------------------------- |
 
 # 2022-MC-无人仓的搬运机器人调度问题
+
+| ![distance](images/2022-MC-B/distance.png)       | ![question2-bn](images\2022-MC-B\question2-bn.png) | ![board-20220418-022922.png](images\2022-MC-B\board-20220418-022922.png) |
+| ------------------------------------------------ | -------------------------------------------------- | ------------------------------------------------------------ |
+| ![question2-2](images\2022-MC-B\question2-2.png) | ![question2](images\2022-MC-B\question2.png)       | ![sensitivity-1](images\2022-MC-B\sensitivity-1.png)         |
+
